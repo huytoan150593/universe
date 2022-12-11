@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap');
+// font-family: 'Barlow', sans-serif;
+// font-family: 'Barlow Condensed', sans-serif;
+// font-family: 'Bellefair', serif;
+
+//Fonts Family
+$title-font: 'Bellefair', serif;
+$heading-font: 'Barlow Condensed', sans-serif;
+$text-font: 'Barlow', sans-serif;
+//font-size
+$title-font-size1: 150px;
+$title-font-size2: 100px;
+$title-font-size3: 56px;
+$title-font-size4: 32px;
+$heading-font-size: 28px;
+$text-font-size: 18px;
+//character-space
+$spacing1: 4.75px;
+$spacing2: 2.7px;
+$spacing3: 2.35px;
+
+//Color
+$background-color: hsl(230 35% 7%);
+$text-color: hsl(0 0% 100%);
+$title-color: hsl(231 77% 90%);
+
+//breakpoint
+$breakpoint-destop: 1200px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 478px;
+
+//Background image
+$desktop-backgrounds: (
+    "home": url("../../public/assets/home/background-home-desktop.jpg"),
+    "destination": url("../../public/assets/destination/background-destination-desktop.jpg"),
+    "crew": url("../../public/assets/crew/background-crew-desktop.jpg"),
+    "technology": url("../../public/assets/technology/background-technology-desktop.jpg"), 
+);
+$tablet-backgrounds: (
+    home: url("../../public/assets/home/background-home-tablet.jpg"),
+    destination: url("../../public/assets/destination/background-destination-tablet.jpg"),
+    crew: url("../../public/assets/crew/background-crew-tablet.jpg"),
+    technology: url("../../public/assets/technology/background-technology-tablet.jpg"), 
+);
+$mobile-backgrounds: (
+    home: url("../../public/assets/home/background-home-mobile.jpg"),
+    destination: url("../../public/assets/destination/background-destination-mobile.jpg"),
+    crew: url("../../public/assets/crew/background-crew-mobile.jpg"),
+    technology: url("../../public/assets/technology/background-technology-mobile.jpg"), 
+);

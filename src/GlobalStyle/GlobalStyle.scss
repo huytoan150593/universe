@@ -1,0 +1,69 @@
+@import "/src/style/variables.scss";
+@import "/src/style/mixin.scss";
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+    background-color: $background-color;
+    color: $text-color;
+    font-family: $text-font;
+    font-size: 16px;
+    min-height: 100vh;
+    overflow: hidden;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.wrapper {
+    max-width: 1110px;
+}
+// #home {
+//     @include flex;
+//     @include backgroundImg;
+//     background-image: url("../../public/assets/home/background-home-desktop.jpg");
+// }
+// #destination {
+//     @include flex;
+//     @include backgroundImg;
+//     background-image: url("../../public/assets/destination/background-destination-desktop.jpg");
+// }
+// #crew {
+//     @include flex;
+//     @include backgroundImg;
+//     background-image: url("../../public/assets/crew/background-crew-desktop.jpg");
+// }
+// #technology {
+//     @include flex;
+//     @include backgroundImg;
+//     background-image: url("../../public/assets/technology/background-technology-desktop.jpg");
+// }
+
+@each $name, $desktop-background in $desktop-backgrounds {
+    ##{$name}{
+        @include flex;
+        @include backgroundImg;
+        background-image: $desktop-background;
+    }
+}
+
+@media (max-width: $breakpoint-tablet){
+    @each $name, $tablet-background in $tablet-backgrounds {
+        ##{$name}{
+            @include flex;
+            @include backgroundImg;
+            background-image: $tablet-background;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-mobile){
+    #home {
+        background-image: url("../../public/assets/home/background-home-mobile.jpg");
+    }
+}
