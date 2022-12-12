@@ -10,7 +10,7 @@ body {
     background-color: $background-color;
     color: $text-color;
     font-family: $text-font;
-    font-size: 16px;
+    font-size: $common-fs;
     min-height: 100vh;
     overflow: hidden;
 }
@@ -20,29 +20,6 @@ li {
 a {
     text-decoration: none;
 }
-.wrapper {
-    max-width: 1110px;
-}
-// #home {
-//     @include flex;
-//     @include backgroundImg;
-//     background-image: url("../../public/assets/home/background-home-desktop.jpg");
-// }
-// #destination {
-//     @include flex;
-//     @include backgroundImg;
-//     background-image: url("../../public/assets/destination/background-destination-desktop.jpg");
-// }
-// #crew {
-//     @include flex;
-//     @include backgroundImg;
-//     background-image: url("../../public/assets/crew/background-crew-desktop.jpg");
-// }
-// #technology {
-//     @include flex;
-//     @include backgroundImg;
-//     background-image: url("../../public/assets/technology/background-technology-desktop.jpg");
-// }
 
 @each $name, $desktop-background in $desktop-backgrounds {
     ##{$name}{
@@ -51,7 +28,22 @@ a {
         background-image: $desktop-background;
     }
 }
+.wrapper {
+    width: 100%;
+    max-width: 1110px;
+}
 
+.home {
+    @include flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 140px;
+    &-content-text {
+        width: 444px;
+        line-height: 32px;
+        color: $secondary-color;
+    }
+}
 @media (max-width: $breakpoint-tablet){
     @each $name, $tablet-background in $tablet-backgrounds {
         ##{$name}{
@@ -60,10 +52,35 @@ a {
             background-image: $tablet-background;
         }
     }
+    .home {
+        height: 100%;
+        text-align: center;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 100px;
+        &-content-text {
+            font-size: 16px;
+            line-height: 28px;
+        }
+    }
 }
 
 @media (max-width: $breakpoint-mobile){
     #home {
         background-image: url("../../public/assets/home/background-home-mobile.jpg");
+    }
+    .home {
+        &-content {
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        &-content-text {
+            width: 327px;
+            font-size: $mobile-fs;
+            line-height: 25px;
+        }
     }
 }

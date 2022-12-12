@@ -11,3 +11,21 @@
     background-repeat: no-repeat;
     margin: auto;
 }
+@mixin title($type) {
+    @if( $type == "space"){
+        font-family: $title-font;
+        font-size: $space-fs-desktop;
+        @media (max-width: $breakpoint-mobile){
+            font-size: $space-fs-mobile;
+        }
+    }
+}
+@mixin keyframes($name){
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+@mixin animate ($name, $duration, $method, $time, $direction){
+    animation: $name $duration $method $time $direction;
+}

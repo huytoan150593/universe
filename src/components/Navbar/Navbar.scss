@@ -18,7 +18,7 @@ header {
     span {
         flex-grow: 1;
         height: 1px;
-        background-color: $title-color;
+        background-color: $secondary-color;
         position: relative;
         &::after {
             position: absolute;
@@ -36,9 +36,6 @@ header {
 .nav-menu {
     flex-basis: 60%;
     height: 100%;
-    font-family: $heading-font;
-    font-size: $text-font-size;
-    color: $text-color;
     text-transform: uppercase;
     img {
         display: none
@@ -50,15 +47,25 @@ header {
         line-height: 96px;
         justify-content: space-evenly;
         li {
+            font-family: $heading-font;
+            font-size: $nav-fs-desktop;
+            color: $text-color;
             cursor: pointer;
+            outline: none;
+            transition: all ease-in-out .3s;
             span {
                 font-weight: bold;
                 margin-inline-end: .75em;
             }
+            &:hover {
+                border-bottom: 2px solid $opacity-color;
+            }
         }
     }
 }
-
+.active {
+    border-bottom: 2px solid $text-color;
+}
 @media (max-width: $breakpoint-tablet) {
     header {
         top: 0;
@@ -72,7 +79,7 @@ header {
     .nav-menu {
         ul {
             padding-inline-start: 0;
-            font-size: 14px;
+            font-size: $nav-fs-tablet;
             span{
                 display: none;
             }
@@ -104,7 +111,7 @@ header {
             align-items: flex-start;
             justify-content: flex-start;
             transition: transform ease-in-out .2s;
-            font-size: 16px;
+            font-size: $nav-fs-mobile;
             padding-inline-start: 2.5rem;
             li {
                 position: relative;

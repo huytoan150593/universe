@@ -8,21 +8,39 @@ $title-font: 'Bellefair', serif;
 $heading-font: 'Barlow Condensed', sans-serif;
 $text-font: 'Barlow', sans-serif;
 //font-size
-$title-font-size1: 150px;
-$title-font-size2: 100px;
-$title-font-size3: 56px;
-$title-font-size4: 32px;
-$heading-font-size: 28px;
-$text-font-size: 18px;
+$common-fs: 18px;
+$mobile-fs: 15px;
+
+$nav-fs-desktop: 16px;
+$nav-fs-tablet: 14px;
+$nav-fs-mobile: 16px;
+
+$space-fs-desktop: 150px;
+$space-fs-mobile: 80px;
+
+$planet-fs-desktop: 100px;
+$planet-fs-tablet: 80px;
+$planet-fs-mobile: 56px;
+
+$sub-heading-fs-desktop: 28px;
+$sub-heading-fs-tablet: 20px;
+$sub-heading-fs-mobile: 16px;
+
 //character-space
 $spacing1: 4.75px;
 $spacing2: 2.7px;
 $spacing3: 2.35px;
 
+$sh-spacing-desktop: 4.72px;
+$sh-spacing-tablet: 3.38px;
+$sh-spacing-mobile: 2.7px;
+
+
 //Color
 $background-color: hsl(230 35% 7%);
 $text-color: hsl(0 0% 100%);
-$title-color: hsl(231 77% 90%);
+$opacity-color: hsl(0 0% 100% / .4);
+$secondary-color: hsl(231 77% 90%);
 
 //breakpoint
 $breakpoint-destop: 1200px;
@@ -48,3 +66,4 @@ $mobile-backgrounds: (
     crew: url("../../public/assets/crew/background-crew-mobile.jpg"),
     technology: url("../../public/assets/technology/background-technology-mobile.jpg"), 
 );
+

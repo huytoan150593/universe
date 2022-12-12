@@ -1,0 +1,27 @@
+@import "/src/style/variables.scss";
+@import "/src/style/mixin.scss";
+
+.space {
+    @include title("space");
+}
+.planet {
+    @include title("planet");
+}
+.member {
+    @include title("member");
+}
+.machine {
+    @include title("machine");
+}
+.sub-heading {
+    font-family: $heading-font;
+    font-size: $sub-heading-fs-desktop;
+    letter-spacing: $sh-spacing-desktop;
+    text-transform: uppercase;
+    @media (max-width: $breakpoint-tablet){
+        font-size: $sub-heading-fs-tablet;
+    }
+    @media (max-width: $breakpoint-mobile){
+        font-size: $sub-heading-fs-mobile;
+    }
+}

@@ -19,9 +19,15 @@ const Navbar = () => {
         }
     };
     const goToPage = (e) => {
-        const currentPage = e.target;
+        const currentPage = e.target.closest("li");
+        const previousPage = document.querySelector("li.active");
         button.current.click();
-        currentPage.style.borderBottom = "1px solid";
+        if (previousPage) {
+            previousPage.classList.remove("active");
+        }
+        console.log(previousPage);
+        console.log(currentPage);
+        currentPage.classList.add("active");
         if (currentPage.dataset.page === "home") {
             navigate("/");
         } else {
