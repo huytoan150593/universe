@@ -11,12 +11,24 @@
     background-repeat: no-repeat;
     margin: auto;
 }
+
 @mixin title($type) {
+    text-transform: uppercase;
+    color: $text-color;
+    font-family: $title-font;
     @if( $type == "space"){
-        font-family: $title-font;
         font-size: $space-fs-desktop;
         @media (max-width: $breakpoint-mobile){
             font-size: $space-fs-mobile;
+        }
+    }
+    @if( $type == "planet"){
+        font-size: $planet-fs-desktop;
+        @media (max-width: $breakpoint-tablet){
+            font-size: $planet-fs-tablet;
+        }
+        @media (max-width: $breakpoint-mobile){
+            font-size: $planet-fs-mobile;
         }
     }
 }

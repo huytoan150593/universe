@@ -8,6 +8,7 @@ header {
     justify-content: space-between;
     position: fixed;
     top: 40px;
+    z-index: 9999;
 }
 .nav-logo {
     flex-basis: 40%;
@@ -50,6 +51,7 @@ header {
             font-family: $heading-font;
             font-size: $nav-fs-desktop;
             color: $text-color;
+            box-sizing: unset;
             cursor: pointer;
             outline: none;
             transition: all ease-in-out .3s;
@@ -58,13 +60,13 @@ header {
                 margin-inline-end: .75em;
             }
             &:hover {
-                border-bottom: 2px solid $opacity-color;
+                border-bottom: 3px solid $opacity-color;
             }
         }
     }
 }
 .active {
-    border-bottom: 2px solid $text-color;
+    border-bottom: 3px solid $text-color;
 }
 @media (max-width: $breakpoint-tablet) {
     header {

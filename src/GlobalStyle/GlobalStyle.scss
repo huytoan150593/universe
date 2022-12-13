@@ -12,7 +12,9 @@ body {
     font-family: $text-font;
     font-size: $common-fs;
     min-height: 100vh;
-    overflow: hidden;
+}
+ul {
+    padding: 0;
 }
 li {
     list-style: none;
@@ -29,19 +31,93 @@ a {
     }
 }
 .wrapper {
-    width: 100%;
+    width: 90%;
     max-width: 1110px;
 }
 
+// -----------------------------------------HOME------------------------------------>
 .home {
     @include flex;
     justify-content: space-between;
     align-items: flex-end;
     padding-top: 140px;
+    &-content {
+        overflow: hidden;
+    }
     &-content-text {
         width: 444px;
         line-height: 32px;
         color: $secondary-color;
+    }
+}
+
+// ------------------------------------------DESTINATION---------------------------------------->
+.destination {
+    padding-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    grid-template-areas: 
+    "a a a a"
+    "c c b b"
+    "c c d d"
+    "c c e f";
+    @each $area in $grid-areas{
+        .item-#{$area}{
+            // background-color: rgba(43, 44, 42, 0.75);
+            grid-area: #{$area};
+        }
+    }
+
+}
+.destination {
+    &-menu {
+        ul {
+            display: flex;
+            li {
+                &:not(:last-child){
+                    margin-right: 34px
+                }
+                font-family: $heading-font;
+                font-size: $common-fs;
+                letter-spacing: $spacing2;
+                color: $secondary-color;
+                text-indent: 1px;
+                line-height: 34px;
+            }
+            
+        }
+    }
+    &-subheading {
+        display: flex;
+        span {
+            font-family: $heading-font;
+            font-size: $sub-heading-fs-desktop;
+            font-weight: bold;
+            letter-spacing: $sh-spacing-desktop;
+            color: $opacity-color;
+            padding-right: 30px;
+        }
+    }
+    &-detail {
+        h5 {
+            font-family: $heading-font;
+            font-size: $common-fs - 4px;
+            font-weight: 400;
+            color: $secondary-color;
+            letter-spacing: $spacing3;
+            text-indent: 1;
+            text-transform: uppercase;
+            padding-top: 28px;
+            padding-bottom: 15px;
+        }
+        h3 {
+            font-family: $title-font;
+            font-size: $sub-heading-fs-desktop;
+            font-weight: 400;
+            text-indent: 1px;
+            text-transform: uppercase;
+        }
     }
 }
 @media (max-width: $breakpoint-tablet){
@@ -59,10 +135,6 @@ a {
         justify-content: space-around;
         align-items: center;
         padding-top: 100px;
-        &-content-text {
-            font-size: 16px;
-            line-height: 28px;
-        }
     }
 }
 
@@ -76,11 +148,6 @@ a {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-        }
-        &-content-text {
-            width: 327px;
-            font-size: $mobile-fs;
-            line-height: 25px;
         }
     }
 }

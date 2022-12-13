@@ -1,0 +1,34 @@
+@import "/src/style/variables.scss";
+@import "/src/style/mixin.scss";
+
+.body-text {
+    width: 444px;
+    font-family: $text-font;
+    font-size: $common-fs;
+    color: $secondary-color;
+    line-height: $line-height;
+    text-indent: 1px;
+    padding-bottom: 54px;
+}
+.planet-text {
+    border-bottom: 1px solid $line-color;
+}
+@media (max-width: $breakpoint-tablet){
+        .space-text {
+            width: 444px;
+        }
+        .planet-text {
+            width: 573px;
+        }
+        .other-text {
+            width: 458px;
+        }
+}
+@media (max-width: $breakpoint-mobile){
+    .body-text {
+        padding-bottom: 30px;
+        width: 327px;
+        font-size: $mobile-fs;
+        line-height: 25px;
+    }
+}
