@@ -13,22 +13,27 @@
 .planet-text {
     border-bottom: 1px solid $line-color;
 }
-@media (max-width: $breakpoint-tablet){
+@media (max-width: $tablet){
         .space-text {
             width: 444px;
         }
         .planet-text {
             width: 573px;
+            font-size: 16px;
         }
         .other-text {
             width: 458px;
         }
 }
-@media (max-width: $breakpoint-mobile){
+@media (max-width: $mobile){
     .body-text {
         padding-bottom: 30px;
         width: 327px;
         font-size: $mobile-fs;
         line-height: 25px;
+    }
+    .planet-text {
+        // width: 573px;
+        // font-size: 16px;
     }
 }

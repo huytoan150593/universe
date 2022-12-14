@@ -18,17 +18,19 @@
     font-family: $title-font;
     @if( $type == "space"){
         font-size: $space-fs-desktop;
-        @media (max-width: $breakpoint-mobile){
+        @media (max-width: $mobile){
             font-size: $space-fs-mobile;
         }
     }
     @if( $type == "planet"){
         font-size: $planet-fs-desktop;
-        @media (max-width: $breakpoint-tablet){
+        margin: 30px auto;
+        @media (max-width: $tablet){
             font-size: $planet-fs-tablet;
         }
-        @media (max-width: $breakpoint-mobile){
+        @media (max-width: $mobile){
             font-size: $planet-fs-mobile;
+            margin: 0;
         }
     }
 }

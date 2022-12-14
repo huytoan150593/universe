@@ -18,10 +18,10 @@
     font-size: $sub-heading-fs-desktop;
     letter-spacing: $sh-spacing-desktop;
     text-transform: uppercase;
-    @media (max-width: $breakpoint-tablet){
+    @media (max-width: $tablet){
         font-size: $sub-heading-fs-tablet;
     }
-    @media (max-width: $breakpoint-mobile){
+    @media (max-width: $mobile){
         font-size: $sub-heading-fs-mobile;
     }
 }

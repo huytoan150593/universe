@@ -39,10 +39,10 @@
         // 0 0 151px #0fa;
 	}    
     //     @include animate(hoverEffect, .6s, ease-out, infinite, alternate);
-    @media (max-width: $breakpoint-tablet){
+    @media (max-width: $tablet){
         width: 242px;
     }
-    @media (max-width: $breakpoint-mobile){
+    @media (max-width: $mobile){
         width: 150px;
         font-size: 20px;
         letter-spacing: 1.25px;

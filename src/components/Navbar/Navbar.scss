@@ -68,7 +68,7 @@ header {
 .active {
     border-bottom: 3px solid $text-color;
 }
-@media (max-width: $breakpoint-tablet) {
+@media (max-width: $tablet) {
     header {
         top: 0;
     }
@@ -89,7 +89,7 @@ header {
     }
 }
 
-@media (max-width: $breakpoint-mobile) {
+@media (max-width: $mobile) {
     .nav-logo {
         img {
             width: 40px;

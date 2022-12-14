@@ -45,9 +45,9 @@ $opacity-color: hsl(0 0% 100% / .4);
 $secondary-color: hsl(231 77% 90%);
 
 //breakpoint
-$breakpoint-destop: 1280px;
-$breakpoint-tablet: 1024px;
-$breakpoint-mobile: 640px;
+$destop: 1280px;
+$tablet: 1024px;
+$mobile: 640px;
 
 //Background image
 $desktop-backgrounds: (
@@ -69,4 +69,4 @@ $mobile-backgrounds: (
     technology: url("../../public/assets/technology/background-technology-mobile.jpg"), 
 );
 
-$grid-areas: "a","b","c","d","e","f";
+$grid-areas: "a","b","c","d","e";
