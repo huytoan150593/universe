@@ -33,6 +33,17 @@
             margin: 0;
         }
     }
+    @if( $type == "member"){
+        font-size: $member-fs-desktop;
+        margin: 30px auto;
+        @media (max-width: $tablet){
+            font-size: $member-fs-tablet;
+        }
+        @media (max-width: $mobile){
+            font-size: $member-fs-mobile;
+            margin: 0;
+        }
+    }
 }
 @mixin keyframes($name){
     @keyframes #{$name} {
