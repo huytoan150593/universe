@@ -1,0 +1,149 @@
+@import "/src/style/variables.scss";
+@import "/src/style/mixin.scss";
+
+#technology {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+.tech {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 90%;
+    padding-top: 180px;
+    &-subheading {
+        display: flex;
+        padding-bottom: 30px;
+        span {
+            font-family: $heading-font;
+            font-size: $sub-heading-fs-desktop;
+            letter-spacing: $sh-spacing-desktop;
+            font-weight: bold;
+            color: $opacity-color;
+            padding-right: 30px;
+        }
+    }
+    &-menu {
+        display: flex;
+        flex-direction: column;
+        span {
+            font-family: $title-font;
+            font-size: $role-fs-desktop;
+            text-align: center;
+            line-height: 80px;
+            width: 80px;
+            height: 80px;
+            aspect-ratio: 1;
+            border: 1px solid $line-color;
+            border-radius: 50%;
+            margin: 20px;
+            cursor: pointer;
+            transition: all linear .2s;
+            &:hover {
+                background-color: $text-color;
+                color: black;
+            }
+        }
+    }
+    &-content {
+        &-title {
+            font-family: $heading-font;
+            font-weight: 400;
+            font-size: 16px;
+            color: $secondary-color;
+            line-height: 19.2px;
+            letter-spacing: 2.7px;
+            text-transform: uppercase;
+        }
+    }
+    &-image {
+        width: 35%;
+        &-desktop {
+            width: 100%;
+        }
+        &-tablet {
+            display: none;
+        }
+    }
+}
+.tech-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: $tablet){
+    .tech {
+        padding-top: 100px;
+        width: 100%;
+        &-subheading {
+            padding-left: 50px;
+            span {
+                font-size: $sub-heading-fs-tablet;
+            }
+        }
+        &-menu {
+            flex-direction: row;
+            margin: 30px;
+            span {
+                font-size: $role-fs-tablet;
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+            }
+        }
+        &-image {
+            width: 100%;
+            &-tablet {
+                display: block;
+                width: 100%;
+            }
+            &-desktop {
+                display: none;
+            }
+        }
+    }
+    .tech-detail {
+        flex-direction: column;
+        justify-content: space-between;
+        .tech-image {
+            order: 1;
+        }
+        .tech-menu {
+            order: 2;
+        }
+        .tech-content {
+            order: 3;
+        }
+    }
+}
+
+@media (max-width: $mobile){
+    .tech {
+        text-align: center;
+        &-subheading {
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            span {
+                font-size: $sub-heading-fs-mobile;
+            }
+        }
+        &-menu {
+            margin: 5px 0px;
+            justify-content: center;
+            span {
+                font-size: $role-fs-mobile;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+            }
+        }
+    }
+}
+
+.tech-selected {
+    background-color: white;
+    color: black;
+}

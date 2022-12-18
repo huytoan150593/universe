@@ -36,7 +36,7 @@ function Crew() {
                 <div className="crew-b crew-content">
                     <div className="crew-content-role">{member.role}</div>
                     <Heading type="member">{member.name}</Heading>
-                    <BodyText type="member-text">{member.bio}</BodyText>
+                    <BodyText type="other-text">{member.bio}</BodyText>
                 </div>
                 <div className="crew-c crew-menu">
                     {length}

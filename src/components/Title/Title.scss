@@ -9,6 +9,8 @@
 }
 .member {
     @include title("member");
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 .machine {
     @include title("machine");

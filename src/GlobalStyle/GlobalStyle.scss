@@ -151,7 +151,6 @@ a {
 @media (max-width: $tablet){
     @each $name, $tablet-background in $tablet-backgrounds {
         ##{$name}{
-            // @include flex;
             @include backgroundImg;
             background-image: $tablet-background;
         }
